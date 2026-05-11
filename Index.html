@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Anime List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="StyleAnimeList.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>My Anime List</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="list">
+            <h2>รายการอนิเมะ</h2>
+            
+            <!-- ฟอร์มเพิ่มข้อมูล -->
+            <div class="form-container">
+                <h3>เพิ่มอนิเมะใหม่</h3>
+                <form id="animeForm">
+                    <div class="form-group">
+                        <label for="nameTh">ชื่อไทย:</label>
+                        <input type="text" id="nameTh" placeholder="เช่น โจโจ่" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nameEn">ชื่ออังกฤษ:</label>
+                        <input type="text" id="nameEn" placeholder="เช่น JoJo's Bizarre Adventure">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">สถานะ:</label>
+                        <select id="type" required>
+                            <option value="">-- เลือกประเภท --</option>
+                            <option value="List">ดองไว้ (List)</option>
+                            <option value="Current">กำลังดู (Current)</option>
+                            <option value="End">จบแล้ว (End)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="page">ตอนที่ดูถึง:</label>
+                        <input type="number" id="page" placeholder="เช่น 5">
+                    </div>
+                    <div class="form-group">
+                        <label for="link">ลิงก์ดู:</label>
+                        <input type="url" id="link" placeholder="https://...">
+                    </div>
+                    <button type="submit" class="btn btn-add">เพิ่มข้อมูล</button>
+                </form>
+            </div>
+
+            <!-- ตารางแสดงข้อมูล -->
+            <div class="table-container">
+                <table id="animeTable">
+                    <thead>
+                        <tr>
+                            <th>ชื่อไทย</th>
+                            <th>ชื่ออังกฤษ</th>
+                            <th>สถานะ</th>
+                            <th>ตอนที่</th>
+                            <th>URL</th>
+                            <th>จัดการ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="animeTableBody">
+                        <!-- ข้อมูลจะแสดงผลตรงนี้ -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 My Anime List | สร้างด้วยความใจรักในอนิเมะ</p>
+    </footer>
+
+    <script src="ScriptAnimeList.js"></script>
+</body>
+</html>
